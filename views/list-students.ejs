@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List Students</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+
+<body>
+    <%- include('../partials/navbar') %>
+        <h1>List of Students</h1>
+        <ul>
+            <% students.forEach(function(student) { %>
+                <li>
+                    <!-- Display student information -->
+                    <strong>Name:</strong>
+                    <%= student.name %><br>
+                        <strong>Age:</strong>
+                        <%= student.age %><br>
+                            <strong>Email:</strong>
+                            <%= student.email %><br>
+
+                                <!-- Add an Edit link with a dynamically generated URL -->
+                                <a href="/students/edit/<%= student.id %>">Edit</a>
+                </li>
+                <% }); %>
+        </ul>
+
+        <a href="/students/new">Add New Student</a>
+</body>
+
+</html>

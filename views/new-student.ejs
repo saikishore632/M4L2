@@ -1,0 +1,24 @@
+<body> <%- include('../partials/navbar') %>
+    <!-- The rest of the HTML code... -->
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Create New Student</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+
+    </head>
+
+    <body> <%- include('../partials/navbar') %>
+            <h1>Create New Student</h1>
+            <form class="student-form" action="/students" method="POST">
+                <label for="name">Name:</label>
+                <br> <input type="text" id="name" name="name">
+                <br><label for="age">Age:</label><br> <input type="text" id="age" name="age">
+                <br> <label for="email">Email:</label><br> <input type="text" id="email" name="email">
+                <br> <input type="submit" value="Submit">
+            </form> <a href="/students">Go Back</a>
+    </body>
+
+    </html>
+</body>
